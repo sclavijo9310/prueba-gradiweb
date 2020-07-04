@@ -91,5 +91,8 @@
         </div>
     </main>
 </div>
+
+<!--Additional scripts-->
+<script src="https://use.fontawesome.com/888b398fb1.js"></script>
 </body>
 </html>

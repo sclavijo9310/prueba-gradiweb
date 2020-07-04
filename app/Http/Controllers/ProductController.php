@@ -20,7 +20,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::query()->paginate(10);
+        $products = Product::query()->paginate(5);
 
         return view('products.index', compact('products'));
     }
@@ -53,7 +53,7 @@ class ProductController extends Controller
         $product = Product::query()->create($data);
 
         if ($product)
-            return redirect()->route('products.show', ['product' => $product->id]);
+            return redirect()->route('products.index');
         else abort(500, 'Ha ocurrido un error interno creando el producto');
     }
 
@@ -97,7 +97,7 @@ class ProductController extends Controller
         }
 
         if ($product->update($data))
-            return redirect()->route('products.show', ['product' => $product->id]);
+            return redirect()->route('products.index');
         else abort(500, 'Ha ocurrido un error interno actualizando el producto');
     }
 
