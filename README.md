@@ -7,6 +7,7 @@
 - Asegurarse de configurar correctamente el APP_URL en el archivo .env (para el manejo de las imágenes)
 - Ejecutar migraciones "php artisan migrate"
 - Ejecutar seed "php artisan db:seed"
+- <b>NOTA: Para acceder al CRUD de productos se debe crear un usuario desde la opción de registrarse (desde la interfaz web)</b>
 
 <hr>
 
