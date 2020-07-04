@@ -30,7 +30,8 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text">$</span>
                 </div>
-                <input name="price" type="number" class="form-control" value="{{$product->price}}" required/>
+                <input name="price" type="number" class="form-control" value="{{$product->price}}" min="1"
+                       max="9999999999" required/>
             </div>
         </div>
         <div class="form-group">

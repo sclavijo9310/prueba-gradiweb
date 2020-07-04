@@ -30,7 +30,8 @@
                     <td>{{$product->description}}</td>
                     <td>${{number_format($product->price,2)}}</td>
                     <td>
-                        <a href="{{route('products.show',['product'=>$product->id])}}" class="btn btn-sm" role="button"
+                        <a href="{{route('products.show',['product'=>$product->id])}}"
+                           onclick="showProduct(event, this)" class="btn btn-sm" role="button"
                            title="Ver producto"><i
                                 class="fa fa-eye"></i></a>
                         <a href="{{route('products.edit',['product'=>$product->id])}}" class="btn btn-sm" role="button"

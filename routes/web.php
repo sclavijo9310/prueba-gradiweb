@@ -16,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes(['confirm' => false, 'verify' => false, 'reset' => false]);
 
-Route::get('/', 'PublicController@index');
+Route::get('/', 'PublicController@index')->name('index');
 
 Route::resource('products', 'ProductController');

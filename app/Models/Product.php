@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $name
  * @property string $description
  * @property string $image
- * @property float $price
+ * @property string $price
  * @property Carbon $created_at
  * @property Carbon $updated_at
  */

@@ -35,6 +35,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="{{ route('index') }}">{{ __('Inicio') }}</a>
+                    </li>
                     @auth
                         <li class="nav-item">
                             <a class="nav-link"
@@ -91,6 +95,35 @@
         </div>
     </main>
 </div>
+
+<div id="product_modal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Detalle del producto</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="modal_body" class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    let product_modal = document.getElementById('product_modal');
+    let modal_title = document.getElementById('modal_title');
+
+    function showProduct(event, elem) {
+        event.preventDefault();
+        $(modal_body).load(elem.href);
+        $(product_modal).modal('show');
+    }
+</script>
 
 <!--Additional scripts-->
 <script src="https://use.fontawesome.com/888b398fb1.js"></script>
