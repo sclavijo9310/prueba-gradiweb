@@ -1,0 +1,1 @@
+{{$product->exists ? 'update' : 'create'}}
