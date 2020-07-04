@@ -1,1 +1,5 @@
-{{$product->exists ? 'update' : 'create'}}
+@extends('layouts.app')
+
+@section('content')
+
+@endsection
